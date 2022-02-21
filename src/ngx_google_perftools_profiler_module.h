@@ -39,5 +39,10 @@ void HeapProfilerStop();
 // var for time interval
 typedef int64_t             int64;
 DECLARE_VARIABLE(int64, heap_profile_time_interval);
+DECLARE_VARIABLE(int64, heap_profile_allocation_interval);
+DECLARE_VARIABLE(int64, heap_profile_deallocation_interval);
+DECLARE_VARIABLE(int64, heap_profile_inuse_interval);
+
+
 
 #endif  // _NGX_GOOGLE_PERFTOOLS_PROFILER_H_INCLUDED_
