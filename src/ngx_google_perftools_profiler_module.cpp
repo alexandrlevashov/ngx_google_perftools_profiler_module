@@ -257,8 +257,12 @@ ngx_lua_ffi_cpu_profiler_stop()
 void
 ngx_lua_ffi_heap_profiler_start(const u_char* profile, int interval)
 {
+    FLAGS_heap_profile_allocation_interval = 0;
+    FLAGS_heap_profile_deallocation_interval = 0;
+    FLAGS_heap_profile_inuse_interval = 0;
+    
     FLAGS_heap_profile_time_interval = interval;
-
+    
     HeapProfilerStart((u_char *)profile);
 }
 
